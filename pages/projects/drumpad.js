@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
 import 'app/globals.css'
-import music from "../music.png"
+import music from "../drum.png"
 
-function Harmony() {
+function Drumpad() {
 
     return (
         <div>
@@ -19,29 +19,24 @@ function Harmony() {
                             backdropFilter: 'brightness(60%)'
 
                         }}
-                    >Harmony Music</h1>
+                    >Drumpad</h1>
                 </div>
                 <h1 className=" text-center text-xl font-bold lg:text-left lg:ml-40 mt-10 mb-6">Overview:</h1>
 
                 <div className="lg:flex  ">
                     <div>
-                        <p className="mx-6 lg:mx-40 text-lg">Music App that can stream any music stored in the Firebase Storage with MongoDB Database built on top of React Frontend framework.
-                            It also allows users to upload their personal mp3 files to the cloud storage.
+                        <p className="mx-6 lg:mx-40 text-lg">This is a Frontend project for a Drumpad simlulator. It is completely based on React Js
+                        and vanilla CSS. It produces sound when buttons are pressed on it and also when the corresponding letters are pressed on the keyboard. Also displays the name of the button pressed.
                         </p>
                         <div className="mx-8 justify-center lg:justify-start flex lg:ml-40 mt-8 ">
 
                             <div>
-                                <Link href={'https://github.com/ayush6678/Harmony'}>
+                                <Link href={'https://github.com/ayush6678/DrumMachine'}>
                                     <button className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Github Frontend</button>
                                 </Link>
-
-                                <Link href={'https://github.com/ayush6678/Harmony-Backend'}>
-                                    <button className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Github Backend</button>
-                                </Link>
-
                             </div>
 
-                            <Link href={'https://musicharmony.netlify.app/'}>
+                            <Link href={'https://majestic-narwhal-56033c.netlify.app/'}>
 
                                 <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ">Live Demo</button>
 
@@ -54,10 +49,7 @@ function Harmony() {
                         <h2 className=" font-bold text-center text-lg">Tech Stack Used:</h2>
                         <ul className=" pl-4 list-disc">
                             <li className=" mt-4">React</li>
-                            <li className=" mt-4">Node Js</li>
-                            <li className=" mt-4">Express</li>
-                            <li className=" mt-4">MongoDB</li>
-                            <li className=" mt-4 mb-7">Firebase Storage</li>
+                            <li className=" mt-4">CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -70,4 +62,4 @@ function Harmony() {
     )
 }
 
-export default Harmony;
+export default Drumpad;

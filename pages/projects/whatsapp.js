@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
 import 'app/globals.css'
-import music from "../music.png"
+import whatsappImage from "../whatsappImage.png"
 
-function Harmony() {
+function Whatsapp() {
 
     return (
         <div>
             <Navbar />
             <div className=" flex flex-col">
                 <div style={{
-                    backgroundImage: `url('${music.src}')`,
+                    backgroundImage: `url('${whatsappImage.src}')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}>
@@ -19,31 +19,32 @@ function Harmony() {
                             backdropFilter: 'brightness(60%)'
 
                         }}
-                    >Harmony Music</h1>
+                    >Whatsapp Clone</h1>
                 </div>
                 <h1 className=" text-center text-xl font-bold lg:text-left lg:ml-40 mt-10 mb-6">Overview:</h1>
 
                 <div className="lg:flex  ">
                     <div>
-                        <p className="mx-6 lg:mx-40 text-lg">Music App that can stream any music stored in the Firebase Storage with MongoDB Database built on top of React Frontend framework.
-                            It also allows users to upload their personal mp3 files to the cloud storage.
+                        <p className="mx-6 lg:mx-40 text-lg">This web app is a clone of Whatsapp. Based on MongoDB for data storage and Pusher API to make the 
+                        messages appear realtime, it provides a space for multiple users to converse in a chat room. You can choose any name you like and send messages to this space
+                        completely anonymous.
                         </p>
                         <div className="mx-8 justify-center lg:justify-start flex lg:ml-40 mt-8 ">
 
                             <div>
-                                <Link href={'https://github.com/ayush6678/Harmony'}>
+                                <Link href={'https://github.com/ayush6678/whatsaspp-clone'}>
                                     <button className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Github Frontend</button>
                                 </Link>
 
-                                <Link href={'https://github.com/ayush6678/Harmony-Backend'}>
+                                <Link href={'https://github.com/ayush6678/whatsapp-backend'}>
                                     <button className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Github Backend</button>
                                 </Link>
 
                             </div>
 
-                            <Link href={'https://musicharmony.netlify.app/'}>
+                            <Link href={''}>
 
-                                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ">Live Demo</button>
+                                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ">Live Demo [Currently Unavailable]</button>
 
                             </Link>
 
@@ -57,7 +58,7 @@ function Harmony() {
                             <li className=" mt-4">Node Js</li>
                             <li className=" mt-4">Express</li>
                             <li className=" mt-4">MongoDB</li>
-                            <li className=" mt-4 mb-7">Firebase Storage</li>
+                            <li className=" mt-4 mb-7">Pusher API</li>
                         </ul>
                     </div>
                 </div>
@@ -70,4 +71,4 @@ function Harmony() {
     )
 }
 
-export default Harmony;
+export default Whatsapp;

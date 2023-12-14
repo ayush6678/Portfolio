@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import 'app/globals.css'
 import { FaLinkedin, FaInstagram, FaMailBulk, FaHeart } from "react-icons/fa";
+import {BiLogoGmail} from "react-icons/bi"
 import About from "./About";
 import Link from "next/link";
 import Projects from "./Projects";
@@ -17,7 +18,7 @@ function Home() {
     });
 
     return (
-        <>
+        <div className="scroll-smooth">
             <motion.div className="progress-bar" style={{ scaleX }} />
 
             <Navbar />
@@ -31,7 +32,7 @@ function Home() {
                 <div className="flex justify-between w-40 m-10">
                     <FaLinkedin color="grey" size={"2em"} />
                     <FaInstagram color="grey" size={"2em"} />
-                    <FaMailBulk color="grey" size={"2em"} />
+                    <BiLogoGmail color="grey" size={"2em"} />
                 </div>
                 <button>Get in Touch</button>
             </div>
@@ -45,7 +46,7 @@ function Home() {
 
                 <div className="flex justify-center">Made with <div className=" mx-2 align-middle"><FaHeart color="red" /></div> by Ayush</div>
             </div>
-        </>
+        </div>
     )
 }
 
