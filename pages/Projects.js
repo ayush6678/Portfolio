@@ -56,7 +56,7 @@ function Projects() {
                 <div class="lg:grid lg:grid-cols-3 gap-4 lg:mx-40 mx-10 grid grid-cols-1">
                     {listing.map((info) => {
                         return (
-                            <Box title={info.title} link={info.link} image={info.image} />
+                            <Box key={`box ${info.title}`} title={info.title} link={info.link} image={info.image} />
                         )
                     })}
                 </div>
