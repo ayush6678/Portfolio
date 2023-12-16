@@ -4,8 +4,14 @@ import { MdOutlineWork } from "react-icons/md"
 import { CgNotes } from "react-icons/cg"
 import { GrMail } from "react-icons/gr"
 import { IoReorderThreeOutline } from 'react-icons/io5'
+import { IoClose } from "react-icons/io5";
 
+import { useState } from "react";
 export default function Navbar() {
+
+    const [display, setDisplay] = useState(true);
+
+    console.log(display);
 
     return (
         <>
@@ -34,9 +40,20 @@ export default function Navbar() {
             </nav> */}
             </div>
 
-            <div className=" fixed right-0.5 p-5 cursor-pointer lg:hidden">
-                <IoReorderThreeOutline size={"2em"} />
+            <div className=" fixed right-0.5 p-5 cursor-pointer lg:hidden z-50">
+                <IoReorderThreeOutline size={"2em"} style={{ display: !display?"none":"" }} onClick={() => { setDisplay(!display) }} />
+                <IoClose size={"2em"} style={{ display: display?"none":"" }} onClick={() => { setDisplay(!display) }}/>
             </div>
+            <div style={{ display: display?"none":"" }} className=" fixed w-full bg-teal-500 bg-opacity-95 pt-10 px-5 transition-all duration-500 ease-in-out">
+                <ul className="justify-center lg:hidden flex-col">
+                    <li className=" m-4 hover:opacity-50 flex-row"><Link href={'/'}><FaHome size={"1.5em"} /> Home</Link></li>
+                    <li className=" m-4 hover:opacity-50  " ><Link href={'/#About'}><FaInfoCircle size={"1.5em"} /> About</Link></li>
+                    <li className=" m-4 hover:opacity-50  " ><Link href={'/#Projects'}><MdOutlineWork size={"1.5em"} />Projects</Link></li>
+                    <li className=" m-4 hover:opacity-50  "><Link href={'/Resume'}><CgNotes size={"1.5em"} />Resume</Link></li>
+                    <li className=" m-4 hover:opacity-50"  ><Link href={'/Contact'}><GrMail size={"1.5em"} />Contact</Link></li>
+                </ul>
+            </div>
+
         </>
 
     )
